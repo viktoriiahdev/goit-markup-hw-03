@@ -18,7 +18,7 @@
 
 /* reset some default styles */
 
-section .container * {
+.container * {
   /* outline: 1px solid red; */
 }
 
@@ -110,7 +110,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -124,6 +124,7 @@ body {
 .page-header .container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -156,12 +157,10 @@ body {
   letter-spacing: 0.02em;
 
   color: var(--main-text-color-dark);
-
-  margin-right: 50px;
 }
 
-.nav-links .nav-item:last-child {
-  margin: 0;
+.page-header .nav-item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .nav-links .nav-link:hover,
@@ -181,11 +180,6 @@ body {
   letter-spacing: 0.02em;
 
   color: var(--secondary-text-color-dark);
-}
-
-.page-header .contact-item {
-  display: flex;
-  align-items: center;
 }
 
 .page-header .contact-item:not(:first-child) {
@@ -218,7 +212,7 @@ body {
 
   color: var(--main-text-color-light);
 
-  max-width: 55%;
+  width: 696px;
   margin: 0 auto 30px;
 }
 
@@ -231,6 +225,10 @@ body {
 
 .advantages-list {
   display: flex;
+}
+
+.advantage-item {
+  flex: 1;
 }
 
 .advantage-item:not(:last-child) {
@@ -277,15 +275,14 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  padding-bottom: 30px;
 }
 
 .team-item:not(:last-child) {
   margin-right: 30px;
 }
 
-.team-item .team-image {
-  margin-bottom: 30px;
+.team-item .team-info {
+  padding: 30px 10px;
 }
 
 .team-item .item-title {
@@ -314,6 +311,7 @@ body {
 .filter-list {
   display: flex;
   align-self: center;
+  justify-content: center;
   margin-bottom: 50px;
 }
 
@@ -383,7 +381,7 @@ body {
 }
 
 .page-footer .addr,
-.page-footer .contact-item {
+.page-footer .contact-item:not(:last-child) {
   margin-bottom: 9px;
 }
 
