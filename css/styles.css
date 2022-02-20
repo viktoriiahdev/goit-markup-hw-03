@@ -174,12 +174,12 @@ body {
   color: var(--secondary-text-color-dark);
 }
 
-.contact-item {
+.page-header .contact-item {
   display: flex;
   align-items: center;
 }
 
-.contact-item:not(:first-child) {
+.page-header .contact-item:not(:first-child) {
   margin-left: 50px;
 }
 
@@ -364,10 +364,16 @@ body {
 
 .page-footer address {
   font-style: normal;
+  margin-top: 20px;
 }
 
 .page-footer .addr {
   color: var(--main-text-color-light);
+}
+
+.page-footer .addr,
+.page-footer .contact-item {
+  margin-bottom: 9px;
 }
 
 .page-footer .contact-link {
